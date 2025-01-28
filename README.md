@@ -49,7 +49,7 @@ __pycache__/
 .env
 ```
 
-Пробуем выполнить команду для сборки образа:
+Пробуем выполнить сборку образа командой:
 
 ```
 docker build -t python-app -f Dockerfile.python .
@@ -68,17 +68,40 @@ docker run -d --name mysql-db \
     -p 3306:3306 \
     mysql:5.7
 ```
+<img src = "img/02.png" width = 100%>
 
 Пробуем запустить наш собранный контейнер с приложением командой:
 
 ```
-docker run --rm -p 5000:5000 --name my-app \
-    --env DB_HOST=mysql-db \
+docker run -d --rm -p 5000:5000 --name my-app \
+    --env DB_HOST=192.168.1.119 \
     --env DB_USER=app \
     --env DB_PASSWORD=QwErTy1234 \
     --env DB_NAME=virtd \
     my-python-app
 ```
+
+<img src = "img/03.png" width = 100%>
+
+Проверяем что оба браза корректно запустились и после этого зайдем внутрь образа с приложениеи и проверим, что в него не попавли лишние файлы и директории описанные в **.dockerignore**:
+
+```
+docker ps
+```
+```
+docker exec -it afb01a365b05 bash
+```
+<img src = "img/04.png" width = 100%>
+
+
+
+
+
+
+
+
+
+
 
 
 # shvirtd-example-python
