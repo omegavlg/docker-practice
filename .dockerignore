@@ -1,0 +1,10 @@
+*.pdf
+*.md
+LICENSE
+haproxy/
+nginx/
+img/
+__pycache__/
+*.pyc
+.DS_Store
+.env

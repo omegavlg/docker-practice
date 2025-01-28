@@ -1,0 +1,17 @@
+# Используем базовый образ python:3.9-slim
+FROM python:3.9-slim
+
+# Устанавливаем рабочую директорию
+WORKDIR /app
+
+# Копируем все файлы проекта в контейнер
+COPY . .
+
+# Устанавливаем зависимости из requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Исключаем ненужные файлы с помощью dockerignore
+COPY .dockerignore .dockerignore
+
+# Указываем команду для запуска приложения (по умолчанию main.py)
+CMD ["python", "not_tested_main.py"]
