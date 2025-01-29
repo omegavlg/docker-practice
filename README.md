@@ -317,16 +317,33 @@ dive hashicorp/terraform:latest
 ```
 <img src = "img/19.png" width = 100%>
 
+```
+da25c3c268493bc8d1313c7698a81a97a99c917ae09a248795e969d82cb53f65
+```
+
 После этого сохраняем образ в файловую систему командой:
 
 ```
 docker save -o terraform.tar hashicorp/terraform:latest
 ```
 
+<img src = "img/20.png" width = 100%>
 
+Распаковываем полученный архивв с образом, далее переходим в распакованнуб директорию, находим нужный нам слой и так же его распаковываем. Появляетеся еще одна дииректория. В этой директории находится искомый файл.
 
-
-
+```
+tar xf terraform.tar
+```
+```
+cd blobs/sha256
+```
+```
+tar xf da25c3c268493bc8d1313c7698a81a97a99c917ae09a248795e969d82cb53f65
+```
+```
+cd bin
+```
+<img src = "img/21.png" width = 100%>
 
 
 
