@@ -284,16 +284,40 @@ chmod +x docker-fork.sh
 
 <img src = "img/16.png" width = 100%>
 
-
-
-
-
 ---
 ## Задача 6
 Скачайте docker образ ```hashicorp/terraform:latest``` и скопируйте бинарный файл ```/bin/terraform``` на свою локальную машину, используя dive и docker save.
 Предоставьте скриншоты  действий .
 
 ### Ответ: 
+
+Скачиваем образ **terraform** командой:
+
+```
+docker pull hashicorp/terraform:latest
+```
+<img src = "img/17.png" width = 100%>
+
+Устанавливаем **dive**
+```
+wget https://github.com/wagoodman/dive/releases/download/v0.12.0/dive_0.12.0_linux_amd64.tar.gz
+tar -xvzf dive_0.12.0_linux_amd64.tar.gz
+sudo mv dive /usr/local/bin/
+```
+<img src = "img/18.png" width = 100%>
+
+```
+dive hashicorp/terraform:latest
+```
+
+
+
+
+
+
+
+
+
 
 
 
