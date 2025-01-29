@@ -233,11 +233,36 @@ curl -L http://127.0.0.1:8090
 
 ### Ответ: 
 
+Создаем и запускем в Yandex Cloud ВМ:
 
+<img src = "img/09.png" width = 100%>
 
+Подключаемся по ssh, выполняем обновление системы и установку docker:
 
+<img src = "img/10.png" width = 100%>
 
+<img src = "img/11.png" width = 100%>
 
+Создаем bash-скрипт **docker-fork.sh** со следующим содержимым:
+
+```
+#!/bin/bash
+
+# Перейти в каталог /opt
+cd /opt
+
+# Склонировать репозиторий 
+git clone https://github.com/omegavlg/docker-practice
+
+# Перейти в каталог проекта
+cd docker-practice
+
+# Собрать и запустить Docker контейнеры
+docker compose up -d
+
+# Проверить статус контейнеров
+docker ps -a
+```
 
 
 
