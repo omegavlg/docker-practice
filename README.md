@@ -301,7 +301,11 @@ docker pull hashicorp/terraform:latest
 Устанавливаем **dive**
 ```
 wget https://github.com/wagoodman/dive/releases/download/v0.12.0/dive_0.12.0_linux_amd64.tar.gz
+```
+```
 tar -xvzf dive_0.12.0_linux_amd64.tar.gz
+```
+```
 sudo mv dive /usr/local/bin/
 ```
 <img src = "img/18.png" width = 100%>
