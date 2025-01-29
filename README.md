@@ -263,6 +263,20 @@ docker compose up -d
 # Проверить статус контейнеров
 docker ps -a
 ```
+Даем скрипту права на запуск:
+
+```
+chmod +x docker-fork.sh
+```
+<img src = "img/12.png" width = 100%>
+
+Запускаем скрипт:
+
+<img src = "img/13.png" width = 100%>
+
+<img src = "img/14.png" width = 100%>
+
+
 
 
 
