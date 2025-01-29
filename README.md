@@ -276,9 +276,13 @@ chmod +x docker-fork.sh
 
 <img src = "img/14.png" width = 100%>
 
+Заходим на сайт проверки **http** подключений и запускаем проверку проверку сервиса:
 
+<img src = "img/15.png" width = 100%>
 
+Повторрно выполняем запросы к БД:
 
+<img src = "img/16.png" width = 100%>
 
 
 
